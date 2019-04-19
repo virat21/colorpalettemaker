@@ -1,33 +1,119 @@
 .App {
-  text-align: center;
+  margin: 0;
+  padding:0;
+
+
+}
+.App .header{
+height:60px;
+background-color: #fafafa;
+position: relative;
+z-index:999;
+box-shadow:0px 0px 10px rgba(0,0,0,0.2);
+display:flex;
+align-items: center;
+padding:0px 20px;
+
+}
+.App .header i{
+  margin-right:10px;
+  color:#03a9f4;
+}
+.App .bottom{
+  display:flex;
+  width:100vw;
+  height:calc(100vh - 60px);
+  
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
+.App .sidebar{
+  width:300px;
+  height:calc(100vh - 60px);
+  background-color: #f5f5f5;
+  border-right:1px solid #eee;
+  overflow: hidden;
+  display:flex;
   flex-direction: column;
-  align-items: center;
+  
+}
+.App .mainContent{
+  display:flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  flex:1;
 }
 
-.App-link {
-  color: #61dafb;
+.App .mainContent .canvas{
+  box-shadow:0px 5px 15px rgba(0,0,0,0.1);
+  overflow: hidden;
+  border-radius:10px;
+  width:270px;
+  height:480px;
+}
+.App .mainContent .canvas .konvajs-content{
+  transform: scale(0.25);
+    transform-origin: top left;
+}
+.App .sidebar .sortableColors{
+  flex:1;
+  overflow: auto;
+  margin-top:10px;
+}
+.App .sidebar .buttonsPanel{
+  height:60px;
+  display:flex;
+  justify-content: space-evenly;
+  align-items: center;
+  border-top:1px solid #ddd;
+  background-color: #fafafa;
+  position: relative;
+  z-index:999;
+}
+.App .sidebar .buttonsPanel .buttonswithicon{
+  border:1px solid #ccc;
+  margin:0px;
+  padding:5px 10px;
+  border-radius:5px;
+  display:flex;
+  justify-content: space-evenly;
+  align-items: center;
+  font-size:13px;
+  cursor: pointer;
+  color: #222;
+  transition:all 200ms ease-in;
+}
+.App .sidebar .buttonsPanel .buttonswithicon:hover{
+  background-color: #ddd;
+}
+.App .sidebar .buttonsPanel .buttonswithicon i{
+  font-size:18px;
+  margin-right:5px;
+}
+.sortablecoloritem{
+display:flex;
+padding:10px;
+align-items: center;
+border-bottom:1px solid #ddd;
+}
+.sortablecoloritem input{
+  flex:1;
+  height:30px;
+  padding-left:10px;
+  background:#fdfdfd;
+  border:1px solid #ddd;
+  border-radius:5px;
+  outline: none;
+}
+.sortablecoloritem i{
+  color:#888;
+
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.sortablecoloritem span:nth-child(2) i{
+  margin-left:10px;
+  cursor: pointer;
+}
+.sortablecoloritem  span:nth-child(3) i{
+  cursor:row-resize;
+  margin-left:5px;
 }
