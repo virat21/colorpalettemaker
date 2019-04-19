@@ -8,7 +8,7 @@ import SortableColorInputView from "./components/SortableColorInputView/Sortable
 import AddColor from "./components/AddColor/AddColor";
 import DownloadColors from "./components/DownloadColors/DownloadColors";
 import { getColorsFromHash } from "./components/utils/getArrayFromHash";
-
+import GitHubButton from "react-github-btn";
 class App extends Component {
   constructor(props) {
     super(props);
@@ -33,7 +33,22 @@ class App extends Component {
           <i className="material-icons">
             color_lens
           </i>
-          Color Palette Maker
+          Color Palette Maker{" "}
+          <span
+           style={{
+              marginLeft: "15px"
+            }}
+          >
+          <GitHubButton
+            href="https://github.com/virat21/colorpalettemaker"
+            data-show-count="true"
+            aria-label="Star virat21/colorpalettemaker on GitHub"
+           
+          >
+            Star
+          </GitHubButton>
+          </span>
+          
         </div>
         <div className="bottom">
           <div className="sidebar">
